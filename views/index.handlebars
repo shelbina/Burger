@@ -1,7 +1,58 @@
-{{!-- Inside your burger directory, create a folder named views.
-Create the index.handlebars file inside views directory.
-Create the layouts directory inside views directory.
-Create the main.handlebars file inside layouts directory.
-Setup the main.handlebars file so it's able to be used by Handlebars.
-Setup the index.handlebars to have the template that Handlebars can render onto.
-Create a button in index.handlebars that will submit the user input into the database. --}}
+<div class='container'>
+<div class="row">
+<h1 class="col-md-12 text-center">Burgers</h1>
+
+<h2 class="col-md-10 col-md-offset-1 text-center">Tasty Burgers that need to be eaten!</h2>
+
+<ul class="col-md-10 col-md-offset-1 text-center">
+  {{#each burgers}}
+    {{#unless this.devoured}}
+      <ul>
+        {{this.burger_name}}
+
+        <form class="form-group" action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+          <input class="form-control" type="hidden" name="devoured" value="true">
+          <button type="submit">EAT ME.</button>
+        </form>
+
+      </ul>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2 class="col-md-10 col-md-offset-1 text-center">Burgers I've devoured</h2>
+
+<ul class="col-md-10 col-md-offset-1 text-center">
+  {{#each burgers}}
+    {{#if this.devoured}}
+      <ul>
+        {{this.burger_name}}
+
+        <form class="form-group text-center" action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+          <input class="form-control" type="hidden" name="devoured" value="false">
+          <button type="submit">Un-eat me? Gross.</button>
+        </form>
+
+      </ul>
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2 class="col-md-10 col-md-offset-1 text-center">Add a Burger</h2>
+<form class="form-group col-md-10 col-md-offset-1" action="burgers/insert" method="POST">
+
+  <div class="form-group">
+    <label for="Burger">Burger Name:</label>
+    <input class="form-control" type="text" name="burger_name">
+  </div>
+
+  <div class="form-group">
+    <label for="Eaten">Did you eat it?</label><br>
+    <input class='radio-inline' type="radio" name="devoured" value="1" checked> Yes!<br>
+    <input class="radio-inline" type="radio" name="devoured" value="0"> No
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
+</div>
+</div>

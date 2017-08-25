@@ -5,3 +5,13 @@
 -- burger_name: a string.
 -- devoured: a boolean.
 -- date: a TIMESTAMP.
+
+Use frozen-coast-73225;
+
+CREATE TABLE burgers (
+	id INT AUTO_INCREMENT NOT NULL,
+	`burger_name` varchar(50) NOT NULL,
+	devoured boolean,
+	date timestamp,
+	primary key (id),
+);
