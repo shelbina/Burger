@@ -6,7 +6,7 @@
 -- devoured: a boolean.
 -- date: a TIMESTAMP.
 
-Use frozen-coast-73225;
+Use heroku_;
 
 CREATE TABLE burgers (
 	id INT AUTO_INCREMENT NOT NULL,
