@@ -8,7 +8,7 @@
 -- Close out of the MySQL command line tool: exit.
 
 
-Use heroku_63549ed6f55947e;
+Use heroku_;
 
 INSERT INTO burgers (`burger_name`, devoured)
 VALUES ("Salmon Burger", true);
