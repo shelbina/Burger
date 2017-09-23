@@ -1,14 +1,9 @@
-// Inside the burgers_controller.js file, import the following:
-// Express
-// burger.js
-// Create the router for the app, and export the router at the end of your file.
-
 var express = require("express");
 
 var router = express.Router();
 
 // Import the model (cat.js) to use its database functions.
-var cat = require("../models/cat.js");
+var cat = require("../models/burgers.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
@@ -36,7 +31,7 @@ router.put("/:id", function(req, res) {
 
   console.log("condition", condition);
 
-  cat.update({
+  burger.update({
     sleepy: req.body.sleepy
   }, condition, function() {
     res.redirect("/");
@@ -46,7 +41,7 @@ router.put("/:id", function(req, res) {
 router.delete("/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
-  cat.delete(condition, function() {
+  burger.delete(condition, function() {
     res.redirect("/");
   });
 });
