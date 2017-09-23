@@ -1,29 +1,18 @@
 {
-  "name": "burger",
+  "name": "burgers",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shelbina/burger.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/shelbina/burger/issues"
-  },
-  "homepage": "https://github.com/shelbina/burger#readme",
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "express": "^4.15.4",
-    "express-handlebars": "^3.0.0",
-    "method-override": "^2.3.9",
-    "mysql": "^2.14.1"
-  },
-  "devDependencies": {
-    "handlebars-helper-css": "^0.1.0"
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "handlebars": "^4.0.5",
+    "method-override": "^2.3.5",
+    "mysql": "^2.10.2"
   }
 }
