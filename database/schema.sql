@@ -5,13 +5,11 @@
 -- burger_name: a string.
 -- devoured: a boolean.
 -- date: a TIMESTAMP.
-
-Use heroku_;
+CREATE DATABASE burgers_db;
+Use burgers_db;
 
 CREATE TABLE burgers (
-	id INT AUTO_INCREMENT NOT NULL,
-	`burger_name` varchar(50) NOT NULL,
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	burger_name varchar(50),
 	devoured boolean,
-	date timestamp,
-	primary key (id),
-);
+	date timestamp);

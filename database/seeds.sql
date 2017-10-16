@@ -8,16 +8,9 @@
 -- Close out of the MySQL command line tool: exit.
 
 
-Use heroku_;
+INSERT INTO burgers(burger_name, devoured, date)
 
-INSERT INTO burgers (`burger_name`, devoured)
-VALUES ("Salmon Burger", true);
-
-INSERT INTO burgers (`burger_name`, devoured)
-VALUES ("Buffalo Chicken Burger", true);
-
-INSERT INTO burgers (`burger_name`, devoured)
-VALUES ("All American Burger", false);
-
-INSERT INTO burgers (`burger_name`, devoured)
-VALUES ("Tuscan Avacado Burger", true);
+VALUES ("Salmon Burger", true, "2017-09-09 09:00:00"),
+       ("Buffalo Chicken Burger", true, "2017-09-09 09:00:00"),
+       ("All American Burger", false, "2017-09-09 09:00:00"),
+       ("Tuscan Avacado Burger", true, "2017-09-09 09:00:00");
