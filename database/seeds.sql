@@ -11,6 +11,6 @@
 INSERT INTO burgers(burger_name, devoured, date)
 
 VALUES ("Salmon Burger", true, "2017-09-09 09:00:00"),
-       ("Buffalo Chicken Burger", true, "2017-09-09 09:00:00"),
+       ("Buffalo Chicken Burger", false, "2017-09-09 09:00:00"),
        ("All American Burger", false, "2017-09-09 09:00:00"),
        ("Tuscan Avacado Burger", true, "2017-09-09 09:00:00");
