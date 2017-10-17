@@ -19,7 +19,7 @@ var router = require('./controllers/controllers.js');
 app.use('/', router);
 
 // Open Server
-var port = process.env.PORT || 3000;
-app.listen(port, function(){
+var PORT = process.env.PORT || 3000;
+app.listen(PORT, function(){
     console.log("Listening on port", PORT);
   });
